@@ -1,0 +1,36 @@
+<div class="container" style="height:500px;">
+  <div class="row">
+    <% if @item.errors.present? %>
+      <ul>
+        <% @item.errors.each do |error, message| %>
+          <li> <%= "#{error.capitalize}  #{message}" %></li>
+        <% end %>
+      </ul>
+    <% end %>
+    <br>
+    <div class="form container">
+
+      <%= form_for [:admin, :photos, @item] do |f| %>
+
+        <div class="form-group">
+          <%= f.label :name, "Name" %>
+          <%= f.text_field :name, class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :description, "Description" %>
+          <%= f.text_area :description, class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :file_location, "File Location" %>
+          <%= f.file_field :file_location, class: "form-control" %>
+        </div>
+
+        <%= f.submit class: "btn btn-primary" %>
+
+      <% end %>
+
+    </div>
+  </div>
+</div>
