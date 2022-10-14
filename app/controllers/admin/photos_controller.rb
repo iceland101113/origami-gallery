@@ -1,5 +1,5 @@
 class Admin::PhotosController < ApplicationController
-  # before_action :authenticate_user!
+  before_action :authenticate_user!
   
   def index
     @small_items = SmallItem.page(params[:page]).per(3)

@@ -49,6 +49,8 @@ gem 'kaminari'
 
 gem 'carrierwave'
 
+gem 'devise'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
@@ -79,3 +81,5 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem "pg", "~> 1.4"
