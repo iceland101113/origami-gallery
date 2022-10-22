@@ -1,0 +1,77 @@
+<section class="home_bg">
+  <div class="container_table">
+    <div class="container_table_cell">
+      <h1><%= t("website_title") %></h1>
+      <h4 style="color: white"><%= t("take_a_look") %></h4>
+      <div class="social_icons">
+        <a href="#works"><h2><i class="bi bi-caret-down-square-fill" aria-hidden="true"></i></h2></a>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="works" class="works">
+  <div class="container">
+    <div class="row">
+      <h2><%= t("work") %></h2>
+      <% @small_items.each do |small_item| %>
+        <div class="col-sm-6 col-md-4">
+          <div class="col-work text-center" data-bs-toggle="tooltip" data-bs-placement="bottom" title="<%= small_item.name %>">
+            <%= image_tag small_item.file_location.url, class: "origami-Img img-responsive center-block", width: '100%', alt: small_item.name %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div id="myModal" class="modal">
+    <!-- The Close Button -->
+    <span class="pic-close">&times;</span>
+    <!-- Modal Content (The Image) -->
+    <div id="caption"></div>
+    <img class="modal-content" id="img01">
+
+    <div id="caption"></div>
+  </div>
+</section>
+<div class="container big-works">
+  <div class="row">
+    <!-- <h2>special works</h2> -->
+    <% @big_items.each do |big_item| %>
+      <div class="text-center" data-bs-toggle="tooltip" data-bs-placement="bottom" title="<%= big_item.name %>">
+        <%= image_tag big_item.file_location.url, class: "img-responsive center-block", width: '100%', alt:big_item.name %><br>
+      </div>
+    <% end %>
+  </div>
+</div> 
+<section id="about" class="about_me clearfix works">
+  <div class="container">
+      <h2><%= t("about") %></h2>
+      <div class="summary">
+        <div class="col-left">
+          <div class="row"> 
+          <div class="col-md-6">
+            <a href="https://www.amazon.co.jp/%E5%88%87%E3%82%89%E3%81%9A%E3%81%AB1%E6%9E%9A%E3%81%A7%E6%8A%98%E3%82%8B%E3%81%A9%E3%81%86%E3%81%B6%E3%81%A4%E3%81%8A%E3%82%8A%E3%81%8C%E3%81%BF-%E3%81%8A%E3%82%8A%E3%81%8C%E3%81%BF%E3%83%9A%E3%83%83%E3%83%88%E3%83%91%E3%83%BC%E3%82%AF-%E3%83%95%E3%83%81%E3%83%A2%E3%83%88%E3%83%A0%E3%83%8D%E3%82%B8/dp/4883377768">
+            <%= image_tag "origami_book1.jpg", width: '100%' %></a>
+          </div>
+          <div class="col-md-6">
+            <a href="https://www.amazon.co.jp/%E5%88%87%E3%82%89%E3%81%9A%E3%81%AB1%E6%9E%9A%E3%81%A7%E6%8A%98%E3%82%8B%E3%81%8A%E3%82%8A%E3%81%8C%E3%81%BF%E3%83%9A%E3%83%83%E3%83%88-%E3%81%8A%E3%82%8A%E3%81%8C%E3%81%BF%E3%83%9A%E3%83%83%E3%83%88%E3%82%A2%E3%82%A4%E3%83%A9%E3%83%B3%E3%83%89-%E3%83%95%E3%83%81%E3%83%A2%E3%83%88-%E3%83%A0%E3%83%8D%E3%82%B8/dp/4883379795">
+            <%= image_tag "origami_book2.jpg", class: "img-responsive", width: '100%' %></a>
+          </div>
+          </div>
+        </div>
+        <div class="col-right">
+          <div class="reference-info">
+            <p><%= t("introduction_section1") %></p>
+            <p><%= t("introduction_section2") %></p>
+          </div>
+          <div class="button-group">
+            <div class="reference-book">
+              <a href="https://www.amazon.co.jp/%E5%88%87%E3%82%89%E3%81%9A%E3%81%AB1%E6%9E%9A%E3%81%A7%E6%8A%98%E3%82%8B%E3%81%A9%E3%81%86%E3%81%B6%E3%81%A4%E3%81%8A%E3%82%8A%E3%81%8C%E3%81%BF-%E3%81%8A%E3%82%8A%E3%81%8C%E3%81%BF%E3%83%9A%E3%83%83%E3%83%88%E3%83%91%E3%83%BC%E3%82%AF-%E3%83%95%E3%83%81%E3%83%A2%E3%83%88%E3%83%A0%E3%83%8D%E3%82%B8/dp/4883377768"><%= t('book1') %></a>
+            </div>
+            <div class="reference-book">
+              <a href="https://www.amazon.co.jp/%E5%88%87%E3%82%89%E3%81%9A%E3%81%AB1%E6%9E%9A%E3%81%A7%E6%8A%98%E3%82%8B%E3%81%8A%E3%82%8A%E3%81%8C%E3%81%BF%E3%83%9A%E3%83%83%E3%83%88-%E3%81%8A%E3%82%8A%E3%81%8C%E3%81%BF%E3%83%9A%E3%83%83%E3%83%88%E3%82%A2%E3%82%A4%E3%83%A9%E3%83%B3%E3%83%89-%E3%83%95%E3%83%81%E3%83%A2%E3%83%88-%E3%83%A0%E3%83%8D%E3%82%B8/dp/4883379795"><%= t('book2') %></a>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</section>

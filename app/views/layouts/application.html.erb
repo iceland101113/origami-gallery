@@ -8,11 +8,60 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <%= favicon_link_tag 'origami-swan2.png' %>
   </head>
 
   <body>
+    <header id="header">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <%= link_to image_tag('origami.png'), '#', class: "navbar-brand" %>
+          <%= link_to "Huei's Origami", root_path, class: "navbar-brand"%>
+          <!-- <a class="navbar-brand" href="#">Huei's Origami</a> -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#work"><%= t("work") %></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about"><%= t("about") %></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><%= t("contact") %></a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="bi bi-globe2" aria-hidden="true" style="font-size: large;"></i>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><%= link_to "中文", :locale => 'zh', class: 'dropdown-item'  %></li>
+                  <li><%= link_to "English", :locale => 'en', class: 'dropdown-item' %></li>
+                  <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
     <div id="w-content">
       <%= yield %>
     </div>
+    <footer id="footer">
+      <div class="container">
+        <div class="footer-content">
+          <p>&copy; 2022 HUEI YI CHENG | All Rights Reserved.</p>
+          <div class="footer-social-icon">
+            <a href="https://www.facebook.com/huiyi.cheng3"><i class="bi bi-facebook" aria-hidden="true"></i></a>
+            <a href="https://github.com/iceland101113"><i class="bi bi-github" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/in/huei-yi-cheng-4070a6123/"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+            <a href="https://medium.com/@icelandcheng"><i class="bi bi-medium" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

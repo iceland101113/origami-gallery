@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  root "admin/photos#index"
+  root "photos#index"
   namespace :admin do
     resources :photos, only: :index
     namespace :photos do
@@ -13,4 +13,6 @@ Rails.application.routes.draw do
     end
     root "photos#index"
   end
+
+  resources :photos, only: :index
 end
