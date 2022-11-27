@@ -6,12 +6,13 @@ zh:
   website_title: 卉儀的摺紙
   take_a_look: 看更多
   introduction_section1: "我是卉儀，我是一個著迷於摺紙藝術的網頁工程師，為了分享更多摺紙資訊以及我的摺紙作品，我創建了這個網頁，希望大家都能從欣賞摺紙作品中獲得一點生活樂趣。"
-  introduction_section2: "我的摺紙作品都是參考淵本宗司大師的摺紙書裡面的教學所製作而成，淵本宗司的'摺紙寵物夢幻島'及'我的紙上動物園'這兩本書裡面有相當多可愛的動物摺紙作品，非常適合對摺紙有興趣的人參考。"
-  book1: 我的紙上動物園
-  book2: 摺紙寵物夢幻島
+  introduction_section2: "我的摺紙作品都是參考淵本宗司大師的摺紙書裡面的教學所製作而成，淵本宗司的:"
+  introduction_section3: "，這兩本書裡面有相當多可愛的動物摺紙作品，非常適合對摺紙有興趣的人參考。"
+  book1: "我的紙上動物園"
+  book2: "摺紙寵物夢幻島"
   contact_form:
     name: 姓名
     email: 信箱
     subject: 主旨
-    message: 內容
+    content: 內容
     submit: 送出

@@ -37,12 +37,13 @@ en:
   website_title: "Huei's Origami"
   take_a_look: "Take a look"
   introduction_section1: "Hi I'm Huei, a software engineer who have great interest in learning new technology and making handicraft, especially for origami. I always obesess with origami, because it's like magic to transform a single sheet of paper into beautiful works. To share the beauty of origami and display some delicate animal origami works which I recently made, I built this website, and hoping those origami works could bring people some delight and joy."
-  introduction_section2: "Origami model which display in this website are designed by professional origami master, Muneji Fuchimoto who really share many design of beautiful orgami models in his books, which are 'origami pet park' and 'origami pet island'."
+  introduction_section2: "Origami model which display in this website are designed by professional origami master, Muneji Fuchimoto who really share many design of beautiful orgami models in his books, which are "
+  introduction_section3: ""
   book1: "origami pet park"
   book2: "origami pet island"
   contact_form:
     name: Name
     email: Email
     subject: Subject
-    message: Message
+    content: Content
     submit: Submit

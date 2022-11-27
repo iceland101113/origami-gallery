@@ -18,12 +18,12 @@
 }
 
 .big-works {
-  padding: 30px;
+  padding: 100px;
 }
 
 
 .col-work {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .col-work :hover {
@@ -99,6 +99,47 @@ h2 {
   float: left;
   width: 50%;
   padding: 0 15px;
+}
+
+.button-group .reference-book {
+  display: inline-block;
+}
+
+.button-group .reference-book {
+  margin-right: 18px;
+}
+
+.button-group a {
+  display: block;
+  color: #000;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 10px 38px;
+  text-transform: capitalize;
+}
+
+.button-group a:hover {
+  background: #000;
+  color: #fff;
+  -webkit-transition: all .4s linear;
+  -moz-transition: all .4s linear;
+  -ms-transition: all .4s linear;
+  -o-transition: all .4s linear;
+  transition: all .4s linear;
+}
+
+.message-submit {
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 10px 38px;
+  text-transform: capitalize;
+  background: #000;
+  color: #fff;
+  -webkit-transition: all .4s linear;
+  -moz-transition: all .4s linear;
+  -ms-transition: all .4s linear;
+  -o-transition: all .4s linear;
+  transition: all .4s linear;
 }
 
 /* The Modal (background) */
