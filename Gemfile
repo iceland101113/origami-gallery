@@ -51,6 +51,8 @@ gem 'carrierwave'
 
 gem 'devise'
 
+gem 'fog-aws'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
@@ -73,6 +75,7 @@ group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
   gem 'annotate'
+  gem 'dotenv-rails'
 end
 
 group :test do
