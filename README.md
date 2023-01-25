@@ -1,6 +1,6 @@
 # Origami Works Display Website
 
-> This project is a Rails Web Application, and it aims to show the origami works which I recently made. Visitors could click on all the origami work to see big-size photos, and they also could add like to their favorite works. If visitors have any comments or questions, they could contact me through the contact form, once they submit message info, it would send an email to the website manager(me). This website also has an admin management page which is for admin users to manage all the origami photos. After the admin user login management page, they could upload, edit and delete origami photos. This application is deployed to [fly.io](https://fly.io/) as demo.
+> This project is a Rails Web Application, and it aims to show the origami works which I recently made. Visitors could click on all the origami work to see big-size photos, and they also could add like to their favorite works. If visitors have any comments or questions, they could contact me through the contact form, once they submit message info, it would send an email to the website manager(me). This website also has an admin management page which is for admin users to manage all the origami photos. After the admin user login management page, they could upload, edit and delete origami photos. This application is deployed to [fly.io](https://fly.io/) as demo, and using AWS S3 to store origami photo files.
 
 the admin page is as below
 ![image](https://user-images.githubusercontent.com/32408322/206624859-857ad4a3-ecf3-41bb-9700-ba20505c040e.png)
