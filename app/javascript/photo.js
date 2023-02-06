@@ -1,6 +1,7 @@
-  import $ from 'jquery'
+import $ from 'jquery'
 
-    // Get the modal
+document.addEventListener("turbo:load", function(event) {
+  // Get the modal
   let modal = document.getElementById('myModal')
   let modalImg = document.getElementById("img01")
   let captionText = document.getElementById("caption")
@@ -18,14 +19,4 @@
   span.onclick = function() { 
     modal.style.display = "none"
   }
-
-  // function like(id) {
-  //   $.ajax({
-  //     url: '/photos/' + id + '/like',
-  //     method: "GET",
-  //     success: function(data) {
-  //       $(`#photo-${data.id}-count`).html('<strong>'+ data.count + '</strong>')
-  //     }
-  //   });
-  // }
-  
+});
