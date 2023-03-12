@@ -30,7 +30,8 @@
                 <a class="nav-link" href="#about"><%= t("about") %></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#"><%= t("contact") %></a>
+                <!-- <a class="nav-link" href="#contact"><%#= t("contact") %></a> -->
+                <%#= link_to t("contact"), new_message_path, class: "nav-link"%>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -47,7 +48,7 @@
         </div>
       </nav>
     </header>
-    <div id="w-content">
+    <div>
       <%= yield %>
     </div>
     <footer id="footer">

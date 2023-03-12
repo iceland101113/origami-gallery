@@ -1,86 +1,88 @@
-<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-  <li class="nav-item" role="presentation">
-    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Small Items</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Big Items</button>
-  </li>
-</ul>
-<div class="tab-content" id="pills-tabContent">
-  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-    <br>
-    <%= link_to '+', new_admin_photos_small_item_path, :class=>"btn btn-default"%>
-    <br>
-    <br>
-    <table class="table table-bordered table-striped table-condensed">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Thumbnail</th>
-          <th>Description</th>
-          <th>Update time</th>
-          <th>#</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% @small_items.each do |item| %>
+<div id="w-content">
+  <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Small Items</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Big Items</button>
+    </li>
+  </ul>
+  <div class="tab-content" id="pills-tabContent">
+    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+      <br>
+      <%= link_to '+', new_admin_photos_small_item_path, :class=>"btn btn-default"%>
+      <br>
+      <br>
+      <table class="table table-bordered table-striped table-condensed">
+        <thead>
           <tr>
-            <td><%= item.name %></td>
-            <td><%= image_tag item.file_location.url , class: "img-responsive center-block", width: '100px' %></td>
-            <td><%= item.description %></td>
-            <td><%= item.updated_at %></td>
-            <td>
-                <%= link_to edit_admin_photos_small_item_path(item) do %>
-                  <i class="bi bi-pencil-fill" style="font-size: 2rem; color: cornflowerblue;"></i>
-                <% end %>
-                <%= link_to admin_photos_small_item_path(item), data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} do %> 
-                  <i class="bi bi-trash-fill" style="font-size: 2rem; color: cornflowerblue;"></i>
-                <% end %> 
-            </td>
+            <th>Name</th>
+            <th>Thumbnail</th>
+            <th>Description</th>
+            <th>Update time</th>
+            <th>#</th>
           </tr>
-        <% end %>
-      </tbody>
-    </table>
-    <div class="text-center">
-      <%= paginate @small_items %>
+        </thead>
+        <tbody>
+          <% @small_items.each do |item| %>
+            <tr>
+              <td><%= item.name %></td>
+              <td><%= image_tag item.file_location.url , class: "img-responsive center-block", width: '100px' %></td>
+              <td><%= item.description %></td>
+              <td><%= item.updated_at %></td>
+              <td>
+                  <%= link_to edit_admin_photos_small_item_path(item) do %>
+                    <i class="bi bi-pencil-fill" style="font-size: 2rem; color: cornflowerblue;"></i>
+                  <% end %>
+                  <%= link_to admin_photos_small_item_path(item), data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} do %> 
+                    <i class="bi bi-trash-fill" style="font-size: 2rem; color: cornflowerblue;"></i>
+                  <% end %> 
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+      <div class="text-center">
+        <%= paginate @small_items %>
+      </div>
     </div>
-  </div>
-  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-    <!-- <div>haha</div> -->
-    <br>
-    <%= link_to '+', new_admin_photos_big_item_path, :class=>"btn btn-default"%>
-    <br>
-    <table class="table table-bordered table-striped table-condensed">
-      <thead>
-        <tr>
-          <th>Title</th>
-          <th>Thumbnail</th>
-          <th>Description</th>
-          <th>Update time</th>
-          <th>#</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% @big_items.each do |item| %>
+    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+      <!-- <div>haha</div> -->
+      <br>
+      <%= link_to '+', new_admin_photos_big_item_path, :class=>"btn btn-default"%>
+      <br>
+      <table class="table table-bordered table-striped table-condensed">
+        <thead>
           <tr>
-            <td><%= item.name %></td>
-            <td><%= image_tag item.file_location.url , class: "img-responsive center-block", width: '100px' %></td>
-            <td><%= item.description %></td>
-            <td><%= item.updated_at %></td>
-            <td>
-                <%= link_to edit_admin_photos_big_item_path(item) do %>
-                  <i class="bi bi-pencil-fill" style="font-size: 2rem; color: cornflowerblue;"></i>
-                <% end %>
-                <%= link_to admin_photos_big_item_path(item), data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} do %> 
-                  <i class="bi bi-trash-fill" style="font-size: 2rem; color: cornflowerblue;"></i>
-                <% end %> 
-            </td>
+            <th>Title</th>
+            <th>Thumbnail</th>
+            <th>Description</th>
+            <th>Update time</th>
+            <th>#</th>
           </tr>
-        <% end %>
-      </tbody>
-    </table>
-    <div class="text-center">
-      <%= paginate @big_items %>
+        </thead>
+        <tbody>
+          <% @big_items.each do |item| %>
+            <tr>
+              <td><%= item.name %></td>
+              <td><%= image_tag item.file_location.url , class: "img-responsive center-block", width: '100px' %></td>
+              <td><%= item.description %></td>
+              <td><%= item.updated_at %></td>
+              <td>
+                  <%= link_to edit_admin_photos_big_item_path(item) do %>
+                    <i class="bi bi-pencil-fill" style="font-size: 2rem; color: cornflowerblue;"></i>
+                  <% end %>
+                  <%= link_to admin_photos_big_item_path(item), data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} do %> 
+                    <i class="bi bi-trash-fill" style="font-size: 2rem; color: cornflowerblue;"></i>
+                  <% end %> 
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+      <div class="text-center">
+        <%= paginate @big_items %>
+      </div>
     </div>
   </div>
 </div>
